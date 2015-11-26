@@ -1,0 +1,6 @@
+ERROR:root:2015-07-24 22:40:12 SYSTEM: 1 | ddddddd
+ERROR:root:2015-07-24 23:14:03 SYSTEM: name 'body' is not defined
+ERROR:root:2015-07-24 23:15:59 SYSTEM: Can't convert 'bytes' object to str implicitly
+ERROR:root:2015-07-24 23:25:10 SYSTEM: 'bytes' object has no attribute 'docode'
+ERROR:root:2015-07-24 23:27:15 SYSTEM: 'str' object is not callable
+ERROR:root:2015-07-24 23:39:21 SYSTEM: 'str' object is not callable
