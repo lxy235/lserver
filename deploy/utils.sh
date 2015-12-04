@@ -22,7 +22,7 @@ export cyan='\E[36m\c'
 export boldcyan='\E[1;36m\c'
 export white='\E[37m\c'
 export boldwhite='\E[1;37m\c'
-export EXPORT_LANGUAGE="echo -n"
+export EXPORT_LANGUAGE="echo -n" #不换行输出
 
 cecho()
 {
@@ -48,3 +48,21 @@ now()
 {
     date +%Y%m%d%H%M%S;
 }
+
+function init()
+{
+  mkdir -p $LOCAL_TMP_DIR;
+  chmod 777 $LOCAL_TMP_DIR > /dev/null 2>&1
+  chmod 777 $LOCAL_TMP_DIR/.. > /dev/null 2>&1
+  mkdir -p $LOCAL_DEPLOY_HISTORY_DIR
+  chmod 777 $LOCAL_DEPLOY_HISTORY_DIR > /dev/null 2>&1
+  touch $DEPLOY_HISTORY_FILE
+  chmod 777 $DEPLOY_HISTORY_FILE > /dev/null 2>&1
+}
+
+function clean()
+{
+  rm -rf $LOCAL_TMP_DIR
+}
+
+
